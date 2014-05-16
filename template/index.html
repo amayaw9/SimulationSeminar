@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+  <head>
+    <title>Simlation Presentation</title>
+
+    <meta charset='utf-8'>
+    <script
+      src='../slides.js'></script>
+  </head>
+
+
+  <body style='display: none'>
+
+    <section class='slides layout-regular template-default'>
+      
+      <!-- Your slides (<article>s) go here. Delete or comment out the
+           slides below. -->
+        
+        
+      
+      <article class='biglogo'>
+        
+      </article>
+
+      <article>
+        <h1>
+          シミュレーションゼミ
+          <br>
+          導入・第一回
+        </h1>
+        <p>
+
+          <br>
+          2014/4/22
+        </p>
+      </article>
+      
+
+
+      <article class='fill'>
+        <h3>
+          まずは導入
+          <br/>
+          シミュレーションゼミとは
+        </h3>
+        <p>
+          <img src='images/shoe.jpg' /> 
+        </p>
+      </article>
+
+
+
+      <article>
+        <h3><span class='blue'><strong>
+          シミュレーションゼミ導入(1)
+        </strong></span></h3>
+        <p>
+          ■ ネットワークシミュレーションに関する知識の学ぶゼミ
+        </p>
+        <ul class='build'>
+          <li>シミュレーションとは何か(=第一章)</li>
+          <li>実験結果の評価に用いる数学</li>
+          <li>実験の入力データの根拠となる数学</li>
+          <li>ネットワークを如何にプログラムで表現するか</li>
+        </ul class='build'>
+      </article>
+
+
+
+      <article>
+        <h3><span class='blue'><strong>
+          シミュレーションゼミ導入(2)
+        </strong></span></h3>
+        <ul>
+          <li>毎週火曜18:00~</li>
+          <li>教科書の回し読み形式</li>
+          <li>英訳と説明＋プログラム課題 (＝１section／２weeks)</li>
+          <li>参加については指導教員と要相談</li>
+        </ul>
+      </article>
+
+
+
+      <article>
+        <h3><span class='blue'><strong>
+          シミュレーションゼミ導入(3)
+        </strong></span></h3>
+        <ul>
+          <li><span class='red'>注意</span></li>
+          <p>
+            合同輪講・ゼミ・レポート・試験など重なると炎上する恐れがあります。協力し合って下さい。          
+          </p>
+          <br/>
+          <li><span class='red'>忠告</span></li>
+          <p>
+            第一章のプログラムは、後の章で繰り返し書き換えます。可読性・再利用性に気を付けましょう
+          </p>
+        </ul>
+      </article>
+
+
+
+      <article class='fill'>
+        <h3>
+          それでは本編
+          <br/>
+          Chapter 1 : Introduction
+        </h3>
+        <p>
+          <img src='images/running.jpg' />
+        </p>
+      </article>
+
+
+
+      <article>
+        <h3><span class='blue'><strong>
+          1.1 OR approach(1)
+        </strong></span></h3>
+        <p>
+          ■ OR(=Operations Researchers)アプローチ
+        </p>
+        <ul>
+          <li>問題の定式化</li>
+          <li>モデルの構築</li>
+          <li>モデルの検証</li>
+          <li>モデルを用いた様々な解決策の評価</li>
+          <li>解決策の実装と保守</li>
+        </ul>
+        <p>
+          ※ これらの手順を繰り返す(検証で前提を吟味する)
+        </p>
+      </article>
+
+
+
+      <article>
+        <h3><span class='blue'><strong>
+          1.1 OR approach(2)
+        </strong></span></h3>
+        <p>
+          ■ ORアプローチとは即ち"モデル構築"
+          <br/>
+          ...ではモデルとは？
+        </p>
+        <ul>
+          <li>実世界のシステム構造を表現したもの</li>
+          <li>Iconic, Analogue, Symbolicに分類できる</li>
+        </ul>
+      </article>
+
+
+
+      <article>
+        <h3><span class='blue'><strong>
+          1.1 OR approach(3)
+        </strong></span></h3>
+        <dl>
+          <dt>Iconicモデル</dt>
+          <dd>実世界のシステムを緻密に再現、スケールを小型化</dd>
+          <dd>例：模型飛行機、地図</dd>
+          <br/>
+          <dt>Analogueモデル</dt>
+          <dd>システムを表す特性を別の特性で用いる</dd>
+          <dd>例：流体を電気や交通や経済システ</dd>
+          <br/>
+          <dt>Symbolicモデル</dt>
+          <dd>システムの特性を数式やプログラムとして表す</dd>
+          <dd>例：NWシミュレーション</dd>
+        </dl>
+      </article>
+
+
+
+      <article>
+        <h3><span class='blue'><strong>
+          1.1 OR approach(4)
+        </strong></span></h3>
+        <p>
+          ■  Operation Researchを特性で分類すると...
+        </p>
+        <p>Determinsitic(決定)モデル</p>
+        <p>　特性に確率の要素を含まない
+          <br/>　線形/非線形/動的プログラミング</p>
+        <br/>
+        <p>Stochastic(確率的)モデル</p>
+        <p>　特性に確率要素を含む
+          <br/>　例：待ち行列理論,確率過程,信頼性,シミュレーション</p>
+      </article>
+
+
+
+      <article>
+        <h3><span class='blue'><strong>
+          1.1 OR approach(5)
+        </strong></span></h3>
+        <p>
+          ■ シミュレーションとは
+        </p>
+        <ul>
+          <li>乱数のランダム性に大きく依存</li>
+          <li>学ぶのが簡単で、広い範囲の問題に適用可</li>
+          <li>ORモデルの中でもっとも使用しやすい</li>
+          <li>他のモデルが適用不能ならば使用すべき</li>
+        </ul>
+      </article>
+
+
+
+      <article>
+        <h3><span class='blue'><strong>
+          1.2 Building a simlation model(1)
+        </strong></span></h3>
+        <dl>
+	  <p>
+            ■ システムは論理的関係を持った存在の集合で表される
+          </p>
+	  <dl>
+            <dt><strong>環境 </strong></dt>
+	    <dd>どのシステムも上位のサブシステムと捉えられる</dd>
+            <dt><strong>相互依存症 </strong></dt>
+	    <dd>孤立したものは動作しても何も起こらない</dd>
+            <dt><strong>サブシステム </strong></dt>
+	    <dd>どのシステムも複数のサブシステムに分類できる</dd>
+            <dt><strong>構造 </strong></dt>
+	    <dd>どのシステムも部品・コンポーネントで構築されている</dd>
+            <dt><strong>変化 </strong></dt>
+	    <dd>現在の状態は時間的に変化する</dd>
+          </dl>
+      </article>
+      
+
+
+      <article>
+        <h3><span class='blue'><strong>
+          1.2 Building a simlation model(2)
+        </strong></span></h3>
+        <br/>
+        <p>
+          ■ シミュレーションモデルを構築するとき
+        </p>
+        <ul>
+          <li>システム全体をシミュレートする必要はない</li>
+          <li>問題に関係のあるサブシステムのみでよい</li>
+          <li>モデルのパーツは詳細度で階層化する</li>
+        </ul>
+      </article>
+
+
+
+      <article>
+	<h3><span class='blue'><strong>
+	  1.2 Building a simlation model(3)
+	</strong></span></h3>
+	<p>
+	  <img height='530px' class='centered' src='images/basic-step(page4).png' />
+	</p>
+      </article>
+
+
+
+      <article>
+	<h3><span class='blue'><strong>
+	  1.2 Building a simlation model(4)
+	</strong></span></h3>
+	<p>
+	  ■ 外因的/内因的な変数(待ちキューの例)
+	</p>
+	<table>
+	  <tr>
+	    <td>
+	      <p><strong>外因的変数</strong></p>
+	      <ol>
+		<li>カスタマーの到着間隔</li>
+		<li>カスタマーの処理時間</li>
+		<li>サーバの数</li>
+		<li>優先度</li>
+	      </ol>
+	      <p><strong>内因的変数</strong></p>
+	      <ol>
+		<li>キューで待つ時間</li>
+		<li>キューで待つカスタマーの数</li>
+	      </ol>
+	    </td>
+	    <td align='center' valign='middle'>
+	      <img src='images/queue.png' />
+	    </td>
+	  </tr>
+	</table>
+      </article>
+
+
+
+      <article>
+	<h3><span class='blue'><strong>
+	  1.2 Building a simulation model(5)
+	</strong></span></h3>
+	<p>■ 制御する/しない変数</p>
+	<br/>
+	<p>例：サーバ数によるキュー待機時間への影響を調べたい</p>
+	<ul>
+	  <li>制御する変数：サーバ数</li>
+	  <li>制御しない変数：その他の変数(= 到着間隔,処理時間など)</li>
+	</ul>
+      </article>
+
+
+
+      <article>
+	<h3><span class='blue'><strong>
+	  1.2 Building a simulation model(6)
+	</strong></span></h3>
+	<p>■ システムの状態を表す変数(= 状態変数)</p>
+	<br/>
+	<p>例：キューにあるタスクの数</p>
+	<ul>
+	  <li>システムがどのような情報を保持したいか</li>
+	  <li>システムがどのような情報を保持しなくてもよいか</li>
+	</ul>
+      </article>
+
+
+
+      <article>
+	<h3><span class='blue'><strong>
+	  1.3.1 The machine interference problem(1)
+	</strong></span></h3>
+	<table>
+	  
+	<table>
+	  <tr>
+	    <td><p><strong>機械の動作</strong></p></td>
+	    <td align='center' valign='middle'>
+	      <img src='images/basic-cycle(page6).png' />
+	    </td>
+	  </tr>
+	  <tr>
+	    <td><p><strong>システムの動作</strong></p>
+	      <ul>
+		<li>リペアマンは同時に1つしか修理できない</li>
+		<li>リペアマンが他の機械を修理中なら、新たに壊れた機械はキューで待つ</li>
+	      </ul>
+	    </td>
+	    <td align='center' valign='middle'>
+	      <img src='images/machine-interference(page6).png' />
+	    </td>
+	  </tr>
+	</table>
+      </article>
+
+
+
+      <article>
+	<h3><span class='blue'><strong>
+	  1.3.1 The machine interference problem(2)
+	</strong></span></h3>
+	<p>■ Arrival event(壊れた機械が到着)</p>
+	<p>
+	  <img style='height: 500px' class='centered' src='images/arrival-event(page7).png' />
+	</p>
+      </article>
+
+
+
+      <article>
+	<h3><span class='blue'><strong>
+	  1.3.1 The machine interference problem(3)
+	</strong></span></h3>
+	<p>■ Departure event(修理された機械が出発)</p>
+	<p>
+	  <img style='height: 400px' class='centered' src='images/departure-event(page8).png' />
+	</p>
+      </article>
+
+
+
+      <article>
+	<h3><span class='blue'><strong>
+	  1.3.1 The machine interference problem(4)
+	</strong></span></h3>
+	<p>■ 2つのイベントをシミュレーションモデルに
+	  <br/>
+	  　組み込むために<span class='red'>クロック</span>変数が必要
+	</p>
+	<ul>
+	  <li>各機械にそれぞれ1つのクロック</li>
+	  <p>(各クロックは、次に機械が壊れる時刻)</p>
+	  <li>リペアマンのクロック</li>
+	  <p>(次に機械の修理が完了する時刻)</p>
+	  <li>現在の時刻を表すマスタークロック</li>
+	</ul>
+      </article>
+
+
+
+      <article>
+	<h3><span class='blue'><strong>
+	  1.3.1 The machine interference problem(5)
+	</strong></span></h3>
+	<p>■ 複数の機械とリペアマンが一人のとき</p>
+	<p>
+	  <img style='height: 473px' class='centered' src='images/event-maniplation(page9).png' />
+	</p>
+      </article>
+
+
+
+      <article class='smaller'>
+	<h3><span class='blue'><strong>
+	  1.3.1 The machine interference problem(6)
+	</strong></span></h3>
+	<p>シミュレーションの例</p>
+	<table>
+	  <tr>
+	    <th>機械</th><td>3台</td>
+	  </tr>
+	  <tr>
+	    <th>動作時間</th><td>10単位時間</td>
+	  </tr>
+	  <tr>
+	    <th>修理時間</th><td>5単位時間</td>
+	  </tr>
+	</table>
+	<p>MC   = マスタークロック、現在の時間を表す</p>
+	<p>CL1~3= 機械1~3が壊れる時刻を保持</p>
+	<p>CL4  = 修理が完了する時刻を保持</p>
+	<br/>
+	<p>n    = キューに入っている壊れている機械の数</p>
+	<p>R    = リペアマンの状態(0->idle, 1->busy)</p>
+      </article>
+
+
+
+      <article>
+	<h3><span class='blue'><strong>
+	  The machine interference problem(7)
+	</strong></span></h3>
+	<p>
+	  <img style='height: 525px' class='centered' src='images/flowchart(page11).png' />
+	</p>
+      </article>
+
+
+
+      <article>
+	<h3><span class='blue'><strong>
+	  実行例
+	</strong></span></h3>
+	<p>
+	  <img style='height: 350px' class='centered' src='images/hand-simulation-1.png' />
+	</p>
+      </article>
+
+
+
+      <article>
+	<h3><span class='blue'><strong>
+	  実行例
+	</strong></span></h3>
+	<p>
+	  <img style='height: 350px' class='centered' src='images/hand-simulation-2.png' />
+	</p>
+      </article>
+
+
+
+      <article>
+	<h3><span class='blue'><strong>
+	  実行例
+	</strong></span></h3>
+	<p>
+	  <img style='height: 350px' class='centered' src='images/hand-simulation-3.png' />
+	</p>
+      </article>
+
+
+
+      <article>
+	<h3><span class='blue'><strong>
+	  実行例
+	</strong></span></h3>
+	<p>
+	  <img style='height: 350px' class='centered' src='images/hand-simulation-4.png' />
+	</p>
+      </article>
+
+
+
+      <article class='fill'>
+        <h3>
+          ご清聴ありがとうございました。
+          <br>
+          来週から皆さんで協力して頑張って下さい。
+        </h3>
+        <p>
+          <img src='images/accomplish.jpg' />
+        </p>
+      </article>
+
+
+
+    </section>
+
+  </body>
+</html>
